@@ -1,9 +1,7 @@
 import { Link } from 'react-router-dom';
-import { Bus, Car, CarFront, Clock3, MapPinned } from 'lucide-react';
+import { Clock3, MapPinned } from 'lucide-react';
 import { LOCATION, SALON, SOCIAL, whatsappLink } from '@/data';
 import { WhatsAppIcon, InstagramIcon, FacebookIcon } from '@/components/BrandIcons';
-
-const DIRECTION_ICONS = [Car, Bus, CarFront];
 
 export default function Footer() {
   return (
@@ -20,7 +18,7 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-5 lg:gap-6 mb-6">
+        <div className="grid lg:grid-cols-2 gap-5 lg:gap-6">
           <div className="card p-6 md:p-8 space-y-5">
             <div>
               <h3 className="font-display text-xl text-mist-900 mb-1">Açık adres</h3>
@@ -73,21 +71,6 @@ export default function Footer() {
               allowFullScreen
             />
           </div>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-4 mb-10">
-          {LOCATION.directions.map((item, i) => {
-            const Icon = DIRECTION_ICONS[i] ?? Car;
-            return (
-              <article key={item.title} className="card p-5">
-                <div className="w-10 h-10 rounded-full bg-soft-50 text-soft-700 flex items-center justify-center mb-3">
-                  <Icon className="w-5 h-5" />
-                </div>
-                <h3 className="font-display text-lg text-mist-900 mb-1.5">{item.title}</h3>
-                <p className="text-sm text-mist-600 leading-relaxed">{item.text}</p>
-              </article>
-            );
-          })}
         </div>
       </div>
 

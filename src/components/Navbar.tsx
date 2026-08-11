@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, ChevronDown } from 'lucide-react';
-import { SALON, SERVICES, SOCIAL } from '@/data';
-import { WhatsAppIcon, InstagramIcon } from '@/components/BrandIcons';
+import { SALON, SERVICES } from '@/data';
 
 const NAV_LINKS = [
   { label: 'Anasayfa', href: '/#home' },
@@ -143,50 +142,21 @@ export default function Navbar() {
 
           <div className="hidden lg:flex items-center gap-2">
             <a
-              href={SOCIAL.instagram}
-              target="_blank"
-              rel="noreferrer"
-              className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white flex items-center justify-center"
-              aria-label="Instagram"
-            >
-              <InstagramIcon className="w-4 h-4" />
-            </a>
-            <a
-              href={SOCIAL.whatsapp()}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-2xl bg-[#25D366] text-white px-4 py-2.5 text-sm font-medium hover:bg-[#1ebe57] transition-colors"
-            >
-              <WhatsAppIcon className="w-4 h-4" />
-              WhatsApp
-            </a>
-            <a
               href={`tel:${SALON.phoneTel}`}
-              className="inline-flex items-center gap-2 rounded-2xl bg-mist-100 text-mist-800 px-4 py-2.5 text-sm font-medium hover:bg-mist-200 transition-colors"
+              className="inline-flex items-center gap-2 rounded-full bg-mist-100 text-mist-800 px-4 py-2.5 text-sm font-medium hover:bg-mist-200 transition-colors"
             >
               <Phone className="w-3.5 h-3.5" />
-              Ara
+              {SALON.phone}
             </a>
           </div>
 
-          <div className="flex lg:hidden items-center gap-2">
-            <a
-              href={SOCIAL.whatsapp()}
-              target="_blank"
-              rel="noreferrer"
-              className="w-10 h-10 rounded-xl bg-[#25D366] text-white flex items-center justify-center"
-              aria-label="WhatsApp"
-            >
-              <WhatsAppIcon className="w-5 h-5" />
-            </a>
-            <button
-              onClick={() => setOpen(!open)}
-              className="w-10 h-10 rounded-xl bg-mist-100 flex items-center justify-center text-mist-800"
-              aria-label="Menü"
-            >
-              {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </button>
-          </div>
+          <button
+            onClick={() => setOpen(!open)}
+            className="lg:hidden w-10 h-10 rounded-xl bg-mist-100 flex items-center justify-center text-mist-800"
+            aria-label="Menü"
+          >
+            {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
         </nav>
 
         {open && (
@@ -239,9 +209,12 @@ export default function Navbar() {
                 {link.label}
               </button>
             ))}
-            <a href={SOCIAL.whatsapp()} target="_blank" rel="noreferrer" className="btn-primary w-full mt-2 bg-[#25D366] hover:bg-[#1ebe57]">
-              <WhatsAppIcon className="w-4 h-4" />
-              WhatsApp
+            <a
+              href={`tel:${SALON.phoneTel}`}
+              className="flex items-center gap-2 px-3 py-3 text-sm text-mist-700 rounded-xl hover:bg-mist-100"
+            >
+              <Phone className="w-4 h-4" />
+              {SALON.phone}
             </a>
           </div>
         )}

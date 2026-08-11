@@ -20,25 +20,6 @@ export const LOCATION = {
     'https://maps.google.com/maps?q=Gevher%20Nesibe%20Mah.%20Hastane%20Cad.%20Melikgazi%20Kayseri&t=&z=16&ie=UTF8&iwloc=&output=embed',
   mapLink:
     'https://www.google.com/maps/search/?api=1&query=Gevher+Nesibe+Mah.+Hastane+Cad.+No:17/B+Melikgazi+Kayseri',
-  directions: [
-    {
-      title: 'Özel araç',
-      text: 'Melikgazi merkezden Hastane Caddesi yönüne ilerleyin. Gevher Nesibe Mahallesi girişinde No:17/B tabelasını arayın. Cadde üzerinde kısa süreli park imkânı bulunur; yoğun saatlerde yan sokakları tercih edin.',
-    },
-    {
-      title: 'Toplu taşıma',
-      text: 'Şehir merkezinden Melikgazi / hastane hattı otobüs ve dolmuşlarıyla Hastane Caddesi durağına inebilirsiniz. Duraktan yürüyüş mesafesi yaklaşık 2–4 dakikadır.',
-    },
-    {
-      title: 'Taksi / transfer',
-      text: 'Şoföre “Gevher Nesibe Mahallesi, Hastane Caddesi No:17/B, Laswegas Spa” demeniz yeterli. Talas, Kocasinan ve Organize bölgesinden ortalama 15–25 dakika sürer.',
-    },
-  ],
-  tips: [
-    'İlk gelişte WhatsApp’tan konum pin’i isteyebilirsiniz.',
-    'Randevu saatinizden 5–10 dakika önce gelmeniz önerilir.',
-    'Son seans kabulü genelde 20:30 civarındadır.',
-  ],
 };
 
 export const SOCIAL = {

@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight, MapPin } from 'lucide-react';
-import { CAROUSEL, SALON, SOCIAL } from '@/data';
-import { WhatsAppIcon, InstagramIcon } from '@/components/BrandIcons';
+import { CAROUSEL, SALON } from '@/data';
 
 export default function Hero() {
   const [index, setIndex] = useState(0);
@@ -46,29 +45,12 @@ export default function Hero() {
           <p className="mt-4 text-white/90 text-base md:text-lg max-w-md">{slide.text}</p>
           </div>
 
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            <a href="#services" className="btn-soft">
-              Masajları gör
-            </a>
-            <a
-              href={SOCIAL.whatsapp()}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-[#25D366] text-white px-6 py-3 text-sm font-medium hover:bg-[#1ebe57] transition-colors shadow-card"
-            >
-              <WhatsAppIcon className="w-5 h-5" />
-              WhatsApp
-            </a>
-            <a
-              href={SOCIAL.instagram}
-              target="_blank"
-              rel="noreferrer"
-              className="btn-soft"
-            >
-              <InstagramIcon className="w-4 h-4" />
-              Instagram
-            </a>
-          </div>
+          <a
+            href="#services"
+            className="mt-7 inline-flex text-sm text-white/90 underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors"
+          >
+            Masajları incele
+          </a>
 
           <div className="mt-10 flex items-center justify-between gap-4">
             <div className="flex gap-2">
