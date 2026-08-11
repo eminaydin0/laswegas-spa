@@ -26,12 +26,12 @@ export const SOCIAL = {
   instagram: 'https://www.instagram.com/laswegasspa',
   facebook: 'https://www.facebook.com/laswegasspa',
   whatsapp: () =>
-    `https://api.whatsapp.com/send/?phone=${SALON.whatsapp}&text=${encodeURIComponent('Merhaba, Laswegas Spa hakkında bilgi almak istiyorum.')}&type=phone_number&app_absent=0`,
+    `https://wa.me/${SALON.whatsapp}?text=${encodeURIComponent('Merhaba, Laswegas Spa hakkında bilgi almak istiyorum.')}`,
   maps: 'https://www.google.com/maps/search/?api=1&query=Gevher+Nesibe+Mah.+Hastane+Cad.+No:17/B+Melikgazi+Kayseri',
 };
 
 export const whatsappLink = (message: string) =>
-  `https://api.whatsapp.com/send/?phone=${SALON.whatsapp}&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`;
+  `https://wa.me/${SALON.whatsapp}?text=${encodeURIComponent(message)}`;
 
 export const IMAGES = {
   heroMassage: 'https://images.pexels.com/photos/6629612/pexels-photo-6629612.jpeg?auto=compress&cs=tinysrgb&w=1920',
