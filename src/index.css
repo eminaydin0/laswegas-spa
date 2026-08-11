@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-[#f7f8f6] text-mist-800 font-sans antialiased;
+  }
+  ::selection {
+    @apply bg-soft-200 text-mist-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-soft-600 text-white px-6 py-3 text-sm font-medium transition-all duration-300 hover:bg-soft-500 hover:shadow-md;
+  }
+  .btn-soft {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-white/95 text-mist-800 px-6 py-3 text-sm font-medium transition-all duration-300 hover:bg-white shadow-card;
+  }
+  .btn-line {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-mist-200/80 bg-white/60 text-mist-800 px-6 py-3 text-sm font-medium transition-all duration-300 hover:border-soft-400 hover:text-soft-700 hover:bg-white;
+  }
+  .section-label {
+    @apply text-[11px] tracking-[0.22em] uppercase text-soft-600 font-medium;
+  }
+
+  .card {
+    @apply bg-white/90 backdrop-blur-sm rounded-[1.35rem] border border-white shadow-card transition-all duration-300;
+  }
+  .card-hover {
+    @apply hover:-translate-y-1 hover:shadow-card-hover hover:border-soft-100;
+  }
+  .card-media {
+    @apply overflow-hidden rounded-[1.35rem] bg-mist-100 shadow-card;
+  }
+  .chip {
+    @apply inline-flex items-center rounded-full bg-white/90 backdrop-blur-sm text-xs text-mist-700 px-3 py-1.5 shadow-sm border border-white/80;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1), transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.reveal-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes menuIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-menu-in {
+  animation: menuIn 0.25s ease-out both;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-slide {
+  animation: fadeSlide 0.55s ease-out both;
+}
