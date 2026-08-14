@@ -15,6 +15,19 @@
 }
 
 @layer components {
+  .page-shell {
+    @apply w-full max-w-7xl mx-auto px-5 md:px-8 lg:px-10;
+  }
+  .section-pad {
+    @apply py-16 md:py-24;
+  }
+  .section-head {
+    @apply text-center max-w-2xl mx-auto mb-10 md:mb-14;
+  }
+  .section-lead {
+    @apply text-mist-600 text-base md:text-lg leading-relaxed;
+  }
+
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2 rounded-md bg-soft-500 text-white px-7 py-3.5 text-sm font-semibold tracking-wide transition-all duration-300 hover:bg-soft-600 hover:shadow-md;
   }
@@ -28,10 +41,10 @@
     @apply text-[11px] tracking-[0.22em] uppercase text-soft-500 font-semibold;
   }
   .section-title {
-    @apply font-display text-3xl md:text-5xl text-soft-500 leading-tight;
+    @apply font-display text-3xl md:text-[2.75rem] text-soft-500 leading-tight;
   }
   .section-title-dark {
-    @apply font-display text-3xl md:text-5xl text-mist-800 leading-tight;
+    @apply font-display text-3xl md:text-[2.75rem] text-mist-800 leading-tight;
   }
 
   .card {
@@ -51,6 +64,9 @@
   }
   .gold-rule {
     @apply mx-auto h-0.5 w-16 bg-soft-500;
+  }
+  .media-frame {
+    @apply overflow-hidden rounded-2xl bg-mist-100 border border-soft-500/20 shadow-card;
   }
 }
 

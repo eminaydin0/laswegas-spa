@@ -56,7 +56,7 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-nav border-b border-mist-200/80">
       <div className="w-full">
         <div className="bg-soft-500 text-white">
-          <div className="px-5 md:px-8 lg:px-12 h-10 flex items-center justify-between gap-4 text-sm">
+          <div className="page-shell h-10 flex items-center justify-between gap-4 text-sm">
             <a href={`tel:${SALON.phoneTel}`} className="inline-flex items-center gap-2 font-medium hover:opacity-90">
               <Phone className="w-3.5 h-3.5" />
               Randevu {SALON.phone}
@@ -64,7 +64,7 @@ export default function Navbar() {
             <span className="hidden sm:inline text-white/90 truncate">{SALON.subtitle}</span>
           </div>
         </div>
-        <nav className="px-5 md:px-8 lg:px-12 h-[68px] md:h-[76px] flex items-center justify-between">
+        <nav className="page-shell h-[68px] md:h-[76px] flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-soft-500 flex items-center justify-center">
               <span className="font-display text-xl text-white">L</span>

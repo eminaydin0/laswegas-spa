@@ -27,7 +27,8 @@ export default function ServiceDetail() {
           <div className="relative h-[48vh] min-h-[320px] overflow-hidden">
             <img src={service.image} alt={service.name} className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-mist-950/60 via-mist-950/15 to-transparent" />
-            <div className="absolute bottom-0 inset-x-0 px-5 md:px-8 lg:px-12 pb-8 md:pb-10">
+            <div className="absolute bottom-0 inset-x-0 pb-8 md:pb-10">
+              <div className="page-shell">
               <Link
                 to="/#services"
                 className="inline-flex items-center gap-2 text-sm text-white/85 hover:text-white mb-4"
@@ -36,11 +37,12 @@ export default function ServiceDetail() {
               </Link>
               <p className="text-[11px] tracking-[0.22em] uppercase text-soft-200 mb-2">{service.nameEn}</p>
               <h1 className="font-display text-4xl md:text-5xl text-white">{service.name}</h1>
+              </div>
             </div>
           </div>
 
-          <div className="px-5 md:px-8 lg:px-12 py-12 md:py-16">
-            <div className="grid lg:grid-cols-12 gap-10 lg:gap-12">
+          <div className="page-shell py-12 md:py-16">
+            <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-start">
               <div className="lg:col-span-7 space-y-10">
                 <div>
                   <h2 className="font-display text-2xl md:text-3xl text-soft-500 mb-3">Bu masaj nedir?</h2>
