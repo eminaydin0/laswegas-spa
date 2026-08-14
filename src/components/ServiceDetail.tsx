@@ -19,10 +19,10 @@ export default function ServiceDetail() {
   const others = SERVICES.filter((s) => s.id !== service.id).slice(0, 3);
 
   return (
-    <div className="min-h-screen bg-[#f7f8f6]">
+    <div className="min-h-screen bg-[#fafafa]">
       <Navbar />
 
-      <main className="pt-[68px] md:pt-[76px]">
+      <main className="pt-[108px] md:pt-[116px]">
         <div className="w-full">
           <div className="relative h-[48vh] min-h-[320px] overflow-hidden">
             <img src={service.image} alt={service.name} className="w-full h-full object-cover" />
@@ -43,7 +43,7 @@ export default function ServiceDetail() {
             <div className="grid lg:grid-cols-12 gap-10 lg:gap-12">
               <div className="lg:col-span-7 space-y-10">
                 <div>
-                  <h2 className="font-display text-2xl md:text-3xl text-mist-900 mb-3">Bu masaj nedir?</h2>
+                  <h2 className="font-display text-2xl md:text-3xl text-soft-500 mb-3">Bu masaj nedir?</h2>
                   <p className="text-mist-600 leading-relaxed text-lg">{service.detailIntro}</p>
                   <p className="text-mist-600 leading-relaxed mt-4">{service.longDescription}</p>
                 </div>
@@ -131,17 +131,17 @@ export default function ServiceDetail() {
               </div>
 
               <aside className="lg:col-span-4 lg:col-start-9">
-                <div className="lg:sticky lg:top-28 card p-6 space-y-5">
+                <div className="lg:sticky lg:top-32 card p-6 space-y-5 border-t-4 border-t-soft-500">
                   <div className="flex items-center gap-3 text-sm text-mist-700">
-                    <Clock3 className="w-4 h-4 text-soft-600" />
+                    <Clock3 className="w-4 h-4 text-soft-500" />
                     Süre: {service.duration}
                   </div>
                   <div className="flex items-center gap-3 text-sm text-mist-700">
-                    <Gauge className="w-4 h-4 text-soft-600" />
+                    <Gauge className="w-4 h-4 text-soft-500" />
                     Yoğunluk: {service.intensity}
                   </div>
                   <div className="flex items-center gap-3 text-sm text-mist-700">
-                    <Droplets className="w-4 h-4 text-soft-600" />
+                    <Droplets className="w-4 h-4 text-soft-500" />
                     {service.oil}
                   </div>
 
@@ -150,7 +150,15 @@ export default function ServiceDetail() {
                       href={whatsappLink(`Merhaba, ${service.name} hakkında bilgi ve randevu istiyorum.`)}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center justify-center gap-2 w-full rounded-full bg-[#25D366] text-white px-6 py-3 text-sm font-medium hover:bg-[#1ebe57]"
+                      className="btn-primary w-full"
+                    >
+                      Tıkla Randevu Al
+                    </a>
+                    <a
+                      href={whatsappLink(`Merhaba, ${service.name} hakkında bilgi ve randevu istiyorum.`)}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center justify-center gap-2 w-full rounded-md bg-[#25D366] text-white px-6 py-3 text-sm font-semibold hover:bg-[#1ebe57]"
                     >
                       <WhatsAppIcon className="w-4 h-4" />
                       WhatsApp’tan sor

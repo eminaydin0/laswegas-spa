@@ -7,7 +7,7 @@ const NAV_LINKS = [
   { label: 'Anasayfa', href: '/#home' },
   { label: 'Hakkımızda', href: '/#about' },
   { label: 'Galeri', href: '/#gallery' },
-  { label: 'Sosyal', href: '/#social' },
+  { label: 'Instagram', href: '/#social' },
   { label: 'İletişim', href: '/#contact' },
 ];
 
@@ -55,10 +55,19 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-nav border-b border-mist-200/80">
       <div className="w-full">
+        <div className="bg-soft-500 text-white">
+          <div className="px-5 md:px-8 lg:px-12 h-10 flex items-center justify-between gap-4 text-sm">
+            <a href={`tel:${SALON.phoneTel}`} className="inline-flex items-center gap-2 font-medium hover:opacity-90">
+              <Phone className="w-3.5 h-3.5" />
+              Randevu {SALON.phone}
+            </a>
+            <span className="hidden sm:inline text-white/90 truncate">{SALON.subtitle}</span>
+          </div>
+        </div>
         <nav className="px-5 md:px-8 lg:px-12 h-[68px] md:h-[76px] flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-soft-100 flex items-center justify-center">
-              <span className="font-display text-xl text-soft-700">L</span>
+            <div className="w-10 h-10 rounded-xl bg-soft-500 flex items-center justify-center">
+              <span className="font-display text-xl text-white">L</span>
             </div>
             <div className="leading-none">
               <div className="font-display text-xl text-mist-900">Laswegas</div>
@@ -71,7 +80,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <button
                   onClick={() => go(link.href)}
-                  className="px-3 py-2 text-sm text-mist-600 hover:text-soft-700 hover:bg-soft-50 rounded-xl transition-colors"
+                  className="px-3 py-2 text-sm font-medium text-soft-600 hover:text-soft-500 hover:bg-soft-50 rounded-md transition-colors"
                 >
                   {link.label}
                 </button>
@@ -82,8 +91,8 @@ export default function Navbar() {
               <button
                 type="button"
                 onClick={() => setMasajOpen((v) => !v)}
-                className={`inline-flex items-center gap-1 px-3 py-2 text-sm rounded-xl transition-colors ${
-                  masajOpen ? 'text-soft-700 bg-soft-50' : 'text-mist-600 hover:text-soft-700 hover:bg-soft-50'
+                className={`inline-flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                  masajOpen ? 'text-soft-500 bg-soft-50' : 'text-soft-600 hover:text-soft-500 hover:bg-soft-50'
                 }`}
                 aria-expanded={masajOpen}
               >
@@ -132,7 +141,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <button
                   onClick={() => go(link.href)}
-                  className="px-3 py-2 text-sm text-mist-600 hover:text-soft-700 hover:bg-soft-50 rounded-xl transition-colors"
+                  className="px-3 py-2 text-sm font-medium text-soft-600 hover:text-soft-500 hover:bg-soft-50 rounded-md transition-colors"
                 >
                   {link.label}
                 </button>
@@ -143,7 +152,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-2">
             <a
               href={`tel:${SALON.phoneTel}`}
-              className="inline-flex items-center gap-2 rounded-full bg-mist-100 text-mist-800 px-4 py-2.5 text-sm font-medium hover:bg-mist-200 transition-colors"
+              className="inline-flex items-center gap-2 rounded-md bg-soft-500 text-white px-4 py-2.5 text-sm font-medium hover:bg-soft-600 transition-colors"
             >
               <Phone className="w-3.5 h-3.5" />
               {SALON.phone}

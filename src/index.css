@@ -7,7 +7,7 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-[#f7f8f6] text-mist-800 font-sans antialiased;
+    @apply bg-[#fafafa] text-mist-800 font-sans antialiased;
   }
   ::selection {
     @apply bg-soft-200 text-mist-900;
@@ -16,29 +16,41 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-soft-600 text-white px-6 py-3 text-sm font-medium transition-all duration-300 hover:bg-soft-500 hover:shadow-md;
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-soft-500 text-white px-7 py-3.5 text-sm font-semibold tracking-wide transition-all duration-300 hover:bg-soft-600 hover:shadow-md;
   }
   .btn-soft {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-white/95 text-mist-800 px-6 py-3 text-sm font-medium transition-all duration-300 hover:bg-white shadow-card;
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-white text-mist-800 px-7 py-3.5 text-sm font-semibold transition-all duration-300 hover:bg-soft-50 shadow-card;
   }
   .btn-line {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-mist-200/80 bg-white/60 text-mist-800 px-6 py-3 text-sm font-medium transition-all duration-300 hover:border-soft-400 hover:text-soft-700 hover:bg-white;
+    @apply inline-flex items-center justify-center gap-2 rounded-md border-2 border-soft-500 text-soft-700 px-7 py-3.5 text-sm font-semibold transition-all duration-300 hover:bg-soft-500 hover:text-white;
   }
   .section-label {
-    @apply text-[11px] tracking-[0.22em] uppercase text-soft-600 font-medium;
+    @apply text-[11px] tracking-[0.22em] uppercase text-soft-500 font-semibold;
+  }
+  .section-title {
+    @apply font-display text-3xl md:text-5xl text-soft-500 leading-tight;
+  }
+  .section-title-dark {
+    @apply font-display text-3xl md:text-5xl text-mist-800 leading-tight;
   }
 
   .card {
-    @apply bg-white/90 backdrop-blur-sm rounded-[1.35rem] border border-white shadow-card transition-all duration-300;
+    @apply bg-white rounded-2xl border border-mist-100/80 shadow-card transition-all duration-300;
   }
   .card-hover {
-    @apply hover:-translate-y-1 hover:shadow-card-hover hover:border-soft-100;
+    @apply hover:-translate-y-1 hover:shadow-card-hover hover:border-soft-200;
   }
   .card-media {
-    @apply overflow-hidden rounded-[1.35rem] bg-mist-100 shadow-card;
+    @apply overflow-hidden rounded-2xl bg-mist-100 shadow-card;
+  }
+  .card-gold {
+    @apply bg-[#fafafa] border-l-[5px] border-l-soft-500 rounded-r-2xl rounded-l-none;
   }
   .chip {
-    @apply inline-flex items-center rounded-full bg-white/90 backdrop-blur-sm text-xs text-mist-700 px-3 py-1.5 shadow-sm border border-white/80;
+    @apply inline-flex items-center rounded-md bg-soft-500 text-white text-xs font-medium px-3 py-1.5 shadow-sm;
+  }
+  .gold-rule {
+    @apply mx-auto h-0.5 w-16 bg-soft-500;
   }
 }
 

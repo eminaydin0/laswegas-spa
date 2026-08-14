@@ -1,104 +1,71 @@
-import { MapPin } from 'lucide-react';
-import { SALON, SOCIAL } from '@/data';
-import { WhatsAppIcon, InstagramIcon, FacebookIcon } from '@/components/BrandIcons';
+import { SOCIAL, IMAGES } from '@/data';
+import { InstagramIcon } from '@/components/BrandIcons';
 import Reveal from '@/components/Reveal';
 
-const LINKS = [
-  {
-    name: 'WhatsApp',
-    handle: SALON.phone,
-    href: SOCIAL.whatsapp(),
-    text: 'Randevu ve sorular için en hızlı yol',
-    icon: WhatsAppIcon,
-    tone: 'bg-[#25D366] text-white',
-    badge: 'Önerilen',
-  },
-  {
-    name: 'Instagram',
-    handle: '@laswegasspa',
-    href: SOCIAL.instagram,
-    text: 'Seans kareleri, hikâyeler ve DM',
-    icon: InstagramIcon,
-    tone: 'bg-gradient-to-br from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white',
-  },
-  {
-    name: 'Facebook',
-    handle: 'Laswegas Spa',
-    href: SOCIAL.facebook,
-    text: 'Haberler ve misafir yorumları',
-    icon: FacebookIcon,
-    tone: 'bg-[#1877F2] text-white',
-  },
-  {
-    name: 'Konum',
-    handle: 'Melikgazi / Kayseri',
-    href: SOCIAL.maps,
-    text: SALON.address,
-    icon: MapPin,
-    tone: 'bg-soft-600 text-white',
-  },
+const FEED = [
+  IMAGES.gallery1,
+  IMAGES.gallery2,
+  IMAGES.gallery3,
+  IMAGES.gallery5,
+  IMAGES.gallery6,
+  IMAGES.gallery7,
+  IMAGES.gallery8,
+  IMAGES.aboutInterior,
+  IMAGES.heroMassage,
 ];
 
 export default function Social() {
   return (
-    <section id="social" className="py-20 md:py-28">
+    <section id="social" className="py-20 md:py-28 bg-white">
       <div className="w-full px-5 md:px-8 lg:px-12">
         <Reveal>
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="section-label mb-3">İletişim & sosyal</p>
-            <h2 className="font-display text-3xl md:text-5xl text-mist-900 leading-tight mb-4">
-              WhatsApp, Instagram ve daha fazlası
-            </h2>
-            <p className="text-mist-600">
-              Randevu için form yok. Aşağıdaki kanallardan yazın — {SALON.hours}
-            </p>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-5 mb-10">
+            <div className="flex items-center gap-4">
+              <div className="w-16 h-16 rounded-full p-[2px] bg-gradient-to-br from-[#f9ce34] via-[#ee2a7b] to-[#6228d7]">
+                <div className="w-full h-full rounded-full bg-white p-[2px]">
+                  <div className="w-full h-full rounded-full bg-soft-500 flex items-center justify-center">
+                    <span className="font-display text-2xl text-white">L</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl text-mist-800">@laswegasspa</h2>
+                <p className="text-sm text-mist-500 mt-0.5">Instagram’dan kareler</p>
+              </div>
+            </div>
+            <a
+              href={SOCIAL.instagram}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-primary inline-flex items-center gap-2 self-start sm:self-auto"
+            >
+              <InstagramIcon className="w-4 h-4" />
+              Instagram’da takip et
+            </a>
           </div>
         </Reveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-          {LINKS.map((item, index) => (
-            <Reveal key={item.name} delay={index * 70}>
-            <a
-              href={item.href}
-              target="_blank"
-              rel="noreferrer"
-              className="relative block card card-hover p-6 h-full"
-            >
-              {'badge' in item && item.badge && (
-                <span className="absolute top-4 right-4 text-[10px] tracking-wide uppercase bg-[#25D366]/12 text-[#128C7E] px-2.5 py-1 rounded-full">
-                  {item.badge}
-                </span>
-              )}
-              <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-5 shadow-sm ${item.tone}`}>
-                <item.icon className="w-6 h-6" />
-              </div>
-              <h3 className="font-display text-xl text-mist-900 mb-1">{item.name}</h3>
-              <p className="text-sm text-soft-600 mb-3">{item.handle}</p>
-              <p className="text-xs text-mist-500 leading-relaxed">{item.text}</p>
-            </a>
+        <div className="grid grid-cols-3 gap-1 sm:gap-2 md:gap-3">
+          {FEED.map((src, index) => (
+            <Reveal key={src} delay={index * 40}>
+              <a
+                href={SOCIAL.instagram}
+                target="_blank"
+                rel="noreferrer"
+                className="group relative block aspect-square overflow-hidden bg-mist-100"
+              >
+                <img
+                  src={src}
+                  alt={`Laswegas Instagram ${index + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-mist-950/0 group-hover:bg-mist-950/35 transition-colors flex items-center justify-center">
+                  <InstagramIcon className="w-7 h-7 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
+              </a>
             </Reveal>
           ))}
         </div>
-
-        <Reveal delay={120}>
-        <div className="rounded-[1.35rem] bg-[#25D366] text-white p-6 md:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 shadow-card">
-          <div>
-            <h3 className="font-display text-2xl md:text-3xl mb-2">Hemen yazın</h3>
-            <p className="text-white/90 text-sm md:text-base">
-              Masaj seçimi, saat ve konum için tek mesaj yeterli.
-            </p>
-          </div>
-          <a
-            href={SOCIAL.whatsapp()}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-white text-[#128C7E] px-6 py-3 text-sm font-semibold hover:bg-mist-50 transition-colors"
-          >
-            <WhatsAppIcon className="w-5 h-5" />
-            WhatsApp’ta sohbet başlat
-          </a>
-        </div>
-        </Reveal>
       </div>
     </section>
   );

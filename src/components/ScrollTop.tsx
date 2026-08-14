@@ -18,7 +18,7 @@ export default function ScrollTop() {
       type="button"
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       aria-label="Yukarı çık"
-      className="fixed bottom-24 right-5 z-[60] w-12 h-12 rounded-full bg-white text-mist-800 shadow-card border border-white flex items-center justify-center hover:bg-soft-50 hover:text-soft-700 transition-colors"
+      className="fixed bottom-5 right-5 z-[60] w-12 h-12 rounded-md bg-soft-500 text-white shadow-[0_8px_24px_rgba(205,155,29,0.35)] flex items-center justify-center hover:bg-soft-600 transition-colors"
     >
       <ChevronUp className="w-5 h-5" />
     </button>
