@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="section-head">
             <h2 className="section-title mb-3">İletişim Bilgilerimiz</h2>
             <p className="section-lead">
-              Melikgazi merkezdeyiz. Konumu haritadan açın veya WhatsApp’tan pin isteyin.
+              Kocasınan / Erkilet’teyiz. Konumu haritadan açın veya WhatsApp’tan pin isteyin.
             </p>
             <div className="gold-rule mt-6" />
           </div>

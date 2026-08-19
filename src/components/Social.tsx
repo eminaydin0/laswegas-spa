@@ -21,7 +21,7 @@ export default function Social() {
         <Reveal>
           <div className="section-head">
             <h2 className="section-title mb-3">Instagram</h2>
-            <p className="section-lead">@laswegasspa — salonumuzdan kareler</p>
+            <p className="section-lead">@laswegaspa — salonumuzdan kareler</p>
             <div className="gold-rule mt-6" />
           </div>
         </Reveal>

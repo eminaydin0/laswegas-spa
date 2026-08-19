@@ -1,33 +1,33 @@
 export const SALON = {
   name: 'Laswegas Spa Merkezi',
   nameShort: 'Laswegas',
-  tagline: 'Kayseri Melikgazi Masaj ve Spa Merkezi',
+  tagline: 'Kayseri Kocasınan Masaj ve Spa Merkezi',
   subtitle: "Kayseri'nin Güvenilir Spa Merkezi",
-  phone: '0553 882 76 46',
-  phoneTel: '+905538827646',
-  whatsapp: '905538827646',
+  phone: '0501 361 03 29',
+  phoneTel: '+905013610329',
+  whatsapp: '905013610329',
   email: 'info@laswegasspa.com',
-  address: 'Gevher Nesibe Mah. Hastane Cad. No:17/B Melikgazi/Kayseri',
-  addressShort: 'Hastane Cad. No:17/B',
-  district: 'Gevher Nesibe Mahallesi',
+  address: 'Osmangazi Mah. 4381. Sokak No:5/D Erkilet, Kocasınan/Kayseri',
+  addressShort: '4381. Sokak No:5/D',
+  district: 'Osmangazi Mahallesi (Erkilet)',
   hours: 'Her gün 10:00 — 22:00',
-  city: 'Kayseri / Melikgazi',
-  landmark: 'Erciyes Üniversitesi Tıp Fakültesi / Gevher Nesibe Hastanesi hattına yakın',
+  city: 'Kayseri / Kocasınan',
+  landmark: 'Erkilet, Kocasınan/Kayseri',
 };
 
 export const LOCATION = {
   mapEmbed:
-    'https://maps.google.com/maps?q=Gevher%20Nesibe%20Mah.%20Hastane%20Cad.%20Melikgazi%20Kayseri&t=&z=16&ie=UTF8&iwloc=&output=embed',
+    'https://maps.google.com/maps?q=Osmangazi%20Mah.%204381.%20Sokak%20No:5/D%20Erkilet%20Kocas%C4%B1nan%20Kayseri&t=&z=16&ie=UTF8&iwloc=&output=embed',
   mapLink:
-    'https://www.google.com/maps/search/?api=1&query=Gevher+Nesibe+Mah.+Hastane+Cad.+No:17/B+Melikgazi+Kayseri',
+    'https://www.google.com/maps/search/?api=1&query=Osmangazi+Mah.+4381.+Sokak+No:5/D+Erkilet+Kocas%C4%B1nan+Kayseri',
 };
 
 export const SOCIAL = {
-  instagram: 'https://www.instagram.com/laswegasspa',
+  instagram: 'https://www.instagram.com/laswegaspa',
   facebook: 'https://www.facebook.com/laswegasspa',
   whatsapp: () =>
     `https://wa.me/${SALON.whatsapp}?text=${encodeURIComponent('Merhaba, Laswegas Spa hakkında bilgi almak istiyorum.')}`,
-  maps: 'https://www.google.com/maps/search/?api=1&query=Gevher+Nesibe+Mah.+Hastane+Cad.+No:17/B+Melikgazi+Kayseri',
+  maps: 'https://www.google.com/maps/search/?api=1&query=Osmangazi+Mah.+4381.+Sokak+No:5/D+Erkilet+Kocas%C4%B1nan+Kayseri',
 };
 
 export const whatsappLink = (message: string) =>
@@ -53,7 +53,7 @@ export const CAROUSEL = [
   {
     src: 'https://images.pexels.com/photos/6629612/pexels-photo-6629612.jpeg?auto=compress&cs=tinysrgb&w=1920',
     title: 'Laswegas Spa Merkezi',
-    text: 'Melikgazi’de sakin bir mola',
+    text: 'Kocasınan’da sakin bir mola',
   },
   {
     src: 'https://images.pexels.com/photos/6187652/pexels-photo-6187652.jpeg?auto=compress&cs=tinysrgb&w=1920',
@@ -73,7 +73,7 @@ export const CAROUSEL = [
   {
     src: 'https://images.pexels.com/photos/6188113/pexels-photo-6188113.jpeg?auto=compress&cs=tinysrgb&w=1920',
     title: 'Kişiye özel seans',
-    text: 'Klasik, medikal, Thai ve aroma terapi',
+    text: 'Klasik, medikal, mix ve aroma terapi',
   },
 ];
 
@@ -164,68 +164,133 @@ export const SERVICES: Service[] = [
     ],
   },
   {
-    id: 'thai-masaji',
-    name: 'Thai Masajı',
-    nameEn: 'Thai Massage',
+    id: 'mix-masaj',
+    name: 'Mix Masaj',
+    nameEn: 'Mix Massage',
     description:
-      'Esneme ve baskı teknikleriyle eklemleri açan, enerji akışını destekleyen geleneksel Tay masajı.',
+      'Klasik, derin doku ve esnetme tekniklerinin bir araya geldiği, ihtiyaca göre şekillenen kişiye özel karma masaj.',
     detailIntro:
-      'Thai masajı yağsız uygulanır. Terapist elleri, dirsekleri, dizleri ve ayaklarını kullanarak baskı uygular; sizi yoga benzeri pozisyonlarda esnetir. Pasif bir “yatıp dinlenme” masajı değildir — hareketlidir, esnekliği ve eklem açıklığını hedefler.',
+      'Mix Masaj, tek bir teknikle sınırlı kalmaz; seans içinde birden fazla yaklaşımı birleştirir. Terapist, görüşme sırasında şikâyetinize göre klasik akış, derin doku baskısı ve hafif esnetme hareketlerini aynı seansta harmanlar. Böylece hem genel rahatlama hem de bölgesel gerginliklere özel çözüm bir arada sunulur.',
     technique:
-      'Sen hatları üzerinde baskı, pasif esneme, ritmik kompresyon. Yağ kullanılmaz; genelde rahat kıyafetle veya ince spa kıyafetiyle yapılır.',
+      'Klasik effleurage/petrissage + derin doku baskısı + hafif pasif esnetme. Oranlar seans başında belirlenen ihtiyaca göre ayarlanır; yağ ile uygulanır.',
     longDescription:
-      'Esneklik kaybı, bel tutulması ve hareketsizlik şikâyetinde etkili. 90 dakikada eklem hareket açıklığı artar; bacaklar ve bel daha hafif hisseder. Spor sonrası toparlanma için de tercih edilir.',
-    duration: '90 dk',
-    intensity: 'Orta — yoğun (esnetmeli)',
-    oil: 'Yağ kullanılmaz',
+      'Bazı günler sadece rahatlama yetmez, bazı bölgelerde daha derin çalışma gerekir. Mix Masaj; sırt ve omuzda derin baskı, bacaklarda yumuşak strok, bel bölgesinde hafif esnetme gibi kombinasyonları tek seansta sunar. Tek bir tekniğe karar veremeyenler ya da birden fazla şikâyeti olan misafirler için en esnek seçenektir.',
+    duration: '75 dk',
+    intensity: 'Hafif — yoğun (kişiye özel karma)',
+    oil: 'Nötr veya aromatik yağ (tercihe göre)',
     image: 'https://images.pexels.com/photos/34821383/pexels-photo-34821383.jpeg?auto=compress&cs=tinysrgb&w=1280',
     benefits: [
-      'Esnekliği belirgin artırır',
-      'Bel ve sırtı açar',
-      'Eklem hareketini genişletir',
-      'Kalça ve hamstring gerginliğini çözer',
-      'Duruşu destekler',
-      'Derin ama “uyanık” bir rahatlama verir',
+      'Birden fazla ihtiyaca tek seansta çözüm',
+      'Bölgeye göre değişen baskı deneyimi',
+      'Genel gevşeme ve hedefli rahatlamayı birleştirir',
+      'Esneklik ve kas gevşemesini birlikte destekler',
+      'Kişiye özel, tekrar edilebilir seans planı',
+      'Klasik ve derin dokunun avantajlarını bir arada sunar',
     ],
     regions: [
-      'Omurga hattı',
-      'Bel ve kalça',
-      'Bacak arkası (hamstring)',
-      'İç bacak ve addüktörler',
-      'Omuz ve kollar',
-      'Ayak tabanı ve baldırlar',
+      'Sırt ve omuz (derin doku ağırlıklı)',
+      'Bel bölgesi (esnetme destekli)',
+      'Boyun ve ense',
+      'Kollar ve bacaklar (klasik akış)',
+      'Kalça ve hamstring (isteğe bağlı esnetme)',
+      'Şikâyete göre lokal odak',
     ],
     bestFor: [
-      'Hareketsiz yaşam / uzun oturma',
-      'Sporcular ve esneklik isteyenler',
-      'Bel–kalça sıkışması hissi',
-      'Yağlı masaj istemeyenler',
-      'Enerji ve açılma arayanlar',
+      'Birden fazla bölgede farklı ihtiyaç hissedenler',
+      'Tek teknikte karar veremeyenler',
+      'Hem rahatlama hem derin çalışma isteyenler',
+      'Düzenli masaj alan, çeşitlilik arayan misafirler',
+      'Kişiye özel seans tercih edenler',
     ],
     howItWorks: [
-      'Kas ve bağ dokusu kontrollü esnetilir; eklem kapsülü yumuşar.',
-      'Baskı noktaları dolaşımı ve lokal gerginliği etkiler.',
-      'Pasif yoga pozisyonları postürü düzeltmeye yardımcı olur.',
-      'Seans sonrası hareket açıklığı artar, bacaklar daha uzun hisseder.',
+      'Seans öncesi kısa görüşmeyle bölgesel ihtiyaçlar belirlenir.',
+      'Genel akış klasik masajla başlar, kaslar ısınır.',
+      'Gergin/bölgesel noktalarda baskı derin dokuya geçer.',
+      'Gerekli görülen bölgelerde hafif pasif esnetme eklenir.',
     ],
     sessionFlow: [
-      'Esneklik ve şikâyet değerlendirmesi',
-      'Yer matı veya geniş masaj yatağı',
-      'Bacak ve kalça açılışları',
-      'Sırt, omuz ve kol esnetmeleri',
-      'Kapanış nefes / kısa dinlenme',
+      'Şikâyet ve öncelik belirleme',
+      'Klasik akışla ısınma',
+      'Hedefli derin doku çalışması',
+      'Gerekli bölgelerde hafif esnetme',
+      'Kapanış ve dinlenme',
     ],
     aftercare: [
-      'Hafif yürüyüş iyi gelir',
-      'Aşırı esneme aynı gün yapılmasın',
-      'Bol sıvı alın',
-      'Kaslarda 1 gün hafif sızı olabilir',
+      'Bol su için',
+      'Derin çalışılan bölgede 1 gün hassasiyet normal olabilir',
+      'Ağır spor aynı gün önerilmez',
+      'Hafif esnetme hareketleri iyi gelir',
     ],
     avoidIf: [
-      'Akut bel fıtığı atağı (doktor onayı şart)',
-      'Osteoporoz / kırık riski',
-      'Gebelik (özel protokol gerekir)',
-      'Yeni eklem yaralanması',
+      'Akut inflamasyon veya açık yara',
+      'Yeni kırık / ameliyat sonrası doktor onayı yoksa',
+      'Ateşli hastalık',
+      'Gebelikte özel protokol gerekir',
+    ],
+  },
+  {
+    id: 'soft-masaj',
+    name: 'Soft Masaj',
+    nameEn: 'Soft Massage',
+    description:
+      'Çok hafif baskıyla uygulanan, bedeni yormadan derin gevşeme sağlayan yumuşak dokunuşlu masaj.',
+    detailIntro:
+      'Soft Masaj, klasik masajdan daha hafif bir baskıyla uygulanır. Amaç kası yoğun çalışmaktan çok sinir sistemini sakinleştirmek ve tam bir dinlenme hissi vermektir. Hassas cilt, düşük ağrı eşiği olan ya da sadece “dokunuşla rahatlamak” isteyen misafirler için idealdir.',
+    technique:
+      'Çok hafif effleurage, yavaş ritimli sürtme ve nazik dokunuş teknikleri; derin baskı veya yoğurma yoktur.',
+    longDescription:
+      'Yoğun bir günün ardından bedeni zorlamadan sakinleşmek isteyenler için tasarlanmıştır. İlk kez masaj deneyimleyecekler, hassas bünyeler ve sadece dinlenmek isteyenler için en yumuşak seçenektir.',
+    duration: '50 dk',
+    intensity: 'Çok hafif',
+    oil: 'Hafif nötr yağ',
+    image: 'https://images.pexels.com/photos/6560252/pexels-photo-6560252.jpeg?auto=compress&cs=tinysrgb&w=1280',
+    benefits: [
+      'Sinir sistemini sakinleştirir',
+      'Aşırı hassas bölgeler için uygundur',
+      'Zihinsel gevşeme sağlar',
+      'Uyku öncesi idealdir',
+      'İlk kez masaj deneyenler için konforludur',
+      'Bedeni yormadan dinlendirir',
+    ],
+    regions: [
+      'Sırt (hafif)',
+      'Omuz ve boyun (çok hafif)',
+      'Kollar ve eller',
+      'Bacaklar',
+      'Ayaklar',
+      'Baş ve şakak (isteğe bağlı, çok hafif)',
+    ],
+    bestFor: [
+      'İlk kez masaj deneyecekler',
+      'Düşük ağrı eşiği olanlar',
+      'Hassas cilt / bünye',
+      'Sadece dinlenmek isteyenler',
+      'Derin baskıdan rahatsız olanlar',
+    ],
+    howItWorks: [
+      'Çok hafif, yavaş ritimli hareketlerle cilt yüzeyinde çalışılır.',
+      'Sinir sistemi hızla parasempatik moda geçer.',
+      'Kaslar zorlanmadan gevşer; nabız ve nefes yavaşlar.',
+      'Seans sonunda bedensel yorgunluktan çok zihinsel dinginlik hissedilir.',
+    ],
+    sessionFlow: [
+      'Kısa görüşme ve baskı tercihi (çok hafif)',
+      'Sırt üstü / yüzüstü pozisyon',
+      'Yavaş ritimli tüm vücut akışı',
+      'Baş / şakak ile kapanış (isteğe bağlı)',
+      'Sessiz dinlenme',
+    ],
+    aftercare: [
+      'Bol su için',
+      'Seans sonrası dinlenmeye devam edin',
+      'Ağır aktiviteye gerek yok',
+      'Uyku öncesi idealdir',
+    ],
+    avoidIf: [
+      'Açık yara veya enfeksiyon',
+      'Ateşli hastalık',
+      'Cilt hassasiyeti / alerji bildirilmeli',
+      'Gebelikte doktor onayı önerilir',
     ],
   },
   {
@@ -429,11 +494,11 @@ export const SERVICES: Service[] = [
     description:
       'Sıcak taş ve aromatik yağlarla uygulanan, kan dolaşımını hızlandıran holistik Bali masajı.',
     detailIntro:
-      'Bali masajı, aromatik yağlar ile sıcak taşları birleştirir. Akıcı İsveç hareketleri ve noktasal baskılar bir aradadır. Kayseri kışında soğuktan sertleşmiş omuz–sırt için özellikle tercih edilir; klasik masajdan biraz daha yoğun, Thai kadar esnetmeli değildir.',
+      'Bali masajı, aromatik yağlar ile sıcak taşları birleştirir. Akıcı İsveç hareketleri ve noktasal baskılar bir aradadır. Kayseri kışında soğuktan sertleşmiş omuz–sırt için özellikle tercih edilir; klasik masajdan biraz daha yoğun, Mix Masaj kadar çeşitlenmiş değildir.',
     technique:
       'Aromatik yağ + sıcak taş (bazalt), avuç/parmak baskısı, uzun strok ve lokal ısı transferi.',
     longDescription:
-      'Kan dolaşımını canlandırır, vücutta sıcak ferahlık bırakır. Thai’nin esneme tarzını istemeyen ama klasik masajdan daha dolu bir seans arayanlar için dengeli seçenektir.',
+      'Kan dolaşımını canlandırır, vücutta sıcak ferahlık bırakır. Esnetme ağırlıklı bir seans istemeyen ama klasik masajdan daha dolu bir seans arayanlar için dengeli seçenektir.',
     duration: '75 dk',
     intensity: 'Orta',
     oil: 'Aromatik yağ + sıcak taş',
@@ -504,7 +569,7 @@ export const THERAPISTS: Therapist[] = [
     name: 'Merve Aktaş',
     title: 'Baş Terapist & Spa Sorumlusu',
     experience: '12 yıl deneyim',
-    specialties: ['Thai Masajı', 'Sultan Masajı', 'Bali Masajı'],
+    specialties: ['Mix Masaj', 'Sultan Masajı', 'Bali Masajı'],
     image: IMAGES.therapist1,
   },
   {

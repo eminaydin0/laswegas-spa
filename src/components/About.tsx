@@ -12,7 +12,7 @@ const HIGHLIGHTS = [
   },
   {
     title: 'Deneyimli ekip',
-    text: 'Klasik, medikal, Thai, aroma, Sultan ve Bali uygulamaları.',
+    text: 'Klasik, medikal, mix, soft, aroma, Sultan ve Bali uygulamaları.',
   },
   {
     title: 'Kolay iletişim',
@@ -27,7 +27,7 @@ export default function About() {
         <Reveal>
           <div className="section-head">
             <h2 className="section-title-dark mb-3 text-balance">
-              Kayseri Melikgazi Masaj ve Spa Salonu
+              Kayseri Kocasınan Masaj ve Spa Salonu
             </h2>
             <p className="section-lead mb-1">{SALON.subtitle}</p>
             <p className="font-display text-xl md:text-2xl text-soft-500">{SALON.name}</p>
@@ -55,8 +55,8 @@ export default function About() {
                   yorgunluğunuzu atabileceğiniz sakin bir ortam yaratıyoruz.
                 </p>
                 <p>
-                  Hijyen ve müşteri memnuniyetini ön planda tutarak klasik, medikal, Thai, aroma
-                  terapi, Sultan ve Bali masajlarıyla hizmet veriyoruz.
+                  Hijyen ve müşteri memnuniyetini ön planda tutarak klasik, medikal, mix, soft,
+                  aroma terapi, Sultan ve Bali masajlarıyla hizmet veriyoruz.
                 </p>
                 <p>
                   {SALON.addressShort}, {SALON.city}. Saatlerimiz {SALON.hours}. Randevu için
