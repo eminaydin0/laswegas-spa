@@ -7,19 +7,17 @@ export const SALON = {
   phoneTel: '+905013610329',
   whatsapp: '905013610329',
   email: 'info@laswegasspa.com',
-  address: 'Osmangazi Mah. 4381. Sokak No:5/D Erkilet, Kocasınan/Kayseri',
+  address: 'Ertuğrul Osman Gazi Mah. 4381. Sokak No:5/D 38110 Kocasınan/Kayseri',
   addressShort: '4381. Sokak No:5/D',
-  district: 'Osmangazi Mahallesi (Erkilet)',
-  hours: 'Her gün 10:00 — 22:00',
+  district: 'Ertuğrul Osman Gazi Mahallesi (Erkilet)',
+  hours: 'Her gün 11:00 — 23:00',
   city: 'Kayseri / Kocasınan',
   landmark: 'Erkilet, Kocasınan/Kayseri',
 };
 
 export const LOCATION = {
-  mapEmbed:
-    'https://maps.google.com/maps?q=Osmangazi%20Mah.%204381.%20Sokak%20No:5/D%20Erkilet%20Kocas%C4%B1nan%20Kayseri&t=&z=16&ie=UTF8&iwloc=&output=embed',
-  mapLink:
-    'https://www.google.com/maps/search/?api=1&query=Osmangazi+Mah.+4381.+Sokak+No:5/D+Erkilet+Kocas%C4%B1nan+Kayseri',
+  mapEmbed: 'https://maps.google.com/maps?q=38.7942517,35.4543727&z=16&ie=UTF8&iwloc=&output=embed',
+  mapLink: 'https://maps.app.goo.gl/pStDFTszjPyF4JnX6',
 };
 
 export const SOCIAL = {
@@ -27,7 +25,7 @@ export const SOCIAL = {
   facebook: 'https://www.facebook.com/laswegasspa',
   whatsapp: () =>
     `https://wa.me/${SALON.whatsapp}?text=${encodeURIComponent('Merhaba, Laswegas Spa hakkında bilgi almak istiyorum.')}`,
-  maps: 'https://www.google.com/maps/search/?api=1&query=Osmangazi+Mah.+4381.+Sokak+No:5/D+Erkilet+Kocas%C4%B1nan+Kayseri',
+  maps: 'https://maps.app.goo.gl/pStDFTszjPyF4JnX6',
 };
 
 export const whatsappLink = (message: string) =>
