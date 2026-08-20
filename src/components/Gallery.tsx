@@ -16,8 +16,8 @@ export default function Gallery() {
       <div className="page-shell">
         <Reveal>
           <div className="section-head">
-            <h2 className="section-title mb-3">Resim Galerisi</h2>
-            <p className="section-lead">Atmosferimizi ve odalarımızı keşfedin</p>
+            <h2 className="section-title mb-3">Salonumuzdan Kareler</h2>
+            <p className="section-lead">Sıcak atmosferimizi ve odalarımızı yakından görün</p>
             <div className="gold-rule mt-6" />
           </div>
         </Reveal>
