@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { MapPinned, Phone } from 'lucide-react';
-import { LOCATION, SALON, SOCIAL, whatsappLink } from '@/data';
+import { LOCATION, SALON, SOCIAL } from '@/data';
 import { WhatsAppIcon, InstagramIcon, FacebookIcon } from '@/components/BrandIcons';
 
 export default function Footer() {
@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="section-head">
             <h2 className="section-title mb-3">İletişim Bilgilerimiz</h2>
             <p className="section-lead">
-              Kocasınan / Erkilet’teyiz. Konumu haritadan açın veya WhatsApp’tan pin isteyin.
+              Kocasınan / Erkilet’teyiz. Konumu haritadan açın.
             </p>
             <div className="gold-rule mt-6" />
           </div>
@@ -54,15 +54,6 @@ export default function Footer() {
                 <a href={LOCATION.mapLink} target="_blank" rel="noreferrer" className="btn-primary">
                   <MapPinned className="w-4 h-4" />
                   Google Maps’te aç
-                </a>
-                <a
-                  href={whatsappLink('Merhaba, Laswegas Spa konumunu / pin’ini paylaşır mısınız?')}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-md bg-[#25D366] text-white px-6 py-3 text-sm font-semibold hover:bg-[#1ebe57]"
-                >
-                  <WhatsAppIcon className="w-4 h-4" />
-                  Konum pin’i iste
                 </a>
               </div>
             </div>
