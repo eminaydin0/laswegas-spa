@@ -2,12 +2,11 @@ import { IMAGES } from '@/data';
 import Reveal from '@/components/Reveal';
 
 const GALLERY = [
-  { src: IMAGES.gallery1, alt: 'Masaj odası' },
-  { src: IMAGES.gallery2, alt: 'Mum ışığı' },
-  { src: IMAGES.gallery3, alt: 'Aromaterapi' },
-  { src: IMAGES.gallery5, alt: 'Sıcak taş' },
-  { src: IMAGES.gallery7, alt: 'Masaj seansı' },
-  { src: IMAGES.gallery8, alt: 'Ayak masajı' },
+  { src: IMAGES.gallery1, alt: 'Laswegas Spa masaj odası' },
+  { src: IMAGES.gallery2, alt: 'Laswegas Spa salon içi' },
+  { src: IMAGES.gallery3, alt: 'Laswegas Spa tedavi alanı' },
+  { src: IMAGES.gallery5, alt: 'Laswegas Spa atmosfer' },
+  { src: IMAGES.gallery6, alt: 'Laswegas Spa detay' },
 ];
 
 export default function Gallery() {

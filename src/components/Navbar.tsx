@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, ChevronDown } from 'lucide-react';
-import { SALON, SERVICES } from '@/data';
+import { IMAGES, SALON, SERVICES } from '@/data';
 
 const NAV_LINKS = [
   { label: 'Anasayfa', href: '/#home' },
@@ -17,6 +17,7 @@ export default function Navbar() {
   const [mobileMasajOpen, setMobileMasajOpen] = useState(false);
   const dropdownRef = useRef<HTMLLIElement>(null);
   const location = useLocation();
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     setOpen(false);
@@ -27,6 +28,13 @@ export default function Navbar() {
       if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 50);
     }
   }, [location]);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 16);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   useEffect(() => {
     const onClick = (event: MouseEvent) => {
@@ -55,8 +63,12 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-nav border-b border-mist-200/80">
       <div className="w-full">
-        <div className="bg-soft-500 text-white">
-          <div className="page-shell h-10 flex items-center justify-between gap-4 text-sm">
+        <div
+          className={`bg-soft-500 text-white overflow-hidden transition-[max-height,opacity] duration-300 ease-out ${
+            scrolled ? 'max-h-0 opacity-0 pointer-events-none' : 'max-h-8 opacity-100'
+          }`}
+        >
+          <div className="page-shell h-8 flex items-center justify-between gap-4 text-xs">
             <a href={`tel:${SALON.phoneTel}`} className="inline-flex items-center gap-2 font-medium hover:opacity-90">
               <Phone className="w-3.5 h-3.5" />
               Randevu {SALON.phone}
@@ -64,15 +76,13 @@ export default function Navbar() {
             <span className="hidden sm:inline text-white/90 truncate">{SALON.subtitle}</span>
           </div>
         </div>
-        <nav className="page-shell h-[68px] md:h-[76px] flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-soft-500 flex items-center justify-center">
-              <span className="font-display text-xl text-white">L</span>
-            </div>
-            <div className="leading-none">
-              <div className="font-display text-xl text-mist-900">Laswegas</div>
-              <div className="text-[10px] tracking-[0.18em] uppercase text-soft-600 mt-1">Spa Merkezi</div>
-            </div>
+        <nav className="page-shell h-[70px] md:h-[76px] flex items-center justify-between overflow-visible">
+          <Link to="/" className="flex items-center shrink-0 overflow-visible">
+            <img
+              src={IMAGES.logo}
+              alt="Laswegas Spa"
+              className="h-[76px] md:h-[88px] w-auto object-contain drop-shadow-sm"
+            />
           </Link>
 
           <ul className="hidden lg:flex items-center gap-1">

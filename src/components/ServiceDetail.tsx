@@ -22,7 +22,7 @@ export default function ServiceDetail() {
     <div className="min-h-screen bg-[#fafafa]">
       <Navbar />
 
-      <main className="pt-[108px] md:pt-[116px]">
+      <main className="pt-[70px] md:pt-[76px]">
         <div className="w-full">
           <div className="relative h-[48vh] min-h-[320px] overflow-hidden">
             <img src={service.image} alt={service.name} className="w-full h-full object-cover" />

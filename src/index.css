@@ -117,3 +117,23 @@
 .animate-fade-slide {
   animation: fadeSlide 0.55s ease-out both;
 }
+
+@keyframes heroKenburns {
+  from {
+    transform: scale(1) translate(0, 0);
+  }
+  to {
+    transform: scale(1.16) translate(-1.5%, -1%);
+  }
+}
+
+.hero-kenburns {
+  animation: heroKenburns 7s cubic-bezier(0.25, 0.1, 0.25, 1) both;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-kenburns {
+    animation: none;
+  }
+}

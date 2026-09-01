@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { MapPinned, Phone } from 'lucide-react';
-import { LOCATION, SALON, SOCIAL } from '@/data';
+import { IMAGES, LOCATION, SALON, SOCIAL } from '@/data';
 import { WhatsAppIcon, InstagramIcon, FacebookIcon } from '@/components/BrandIcons';
 
 export default function Footer() {
@@ -75,9 +75,12 @@ export default function Footer() {
       <div className="bg-soft-500 text-white">
         <div className="page-shell py-12 grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
           <div>
-            <Link to="/" className="inline-block mb-4">
-              <div className="font-display text-2xl text-white">Laswegas</div>
-              <div className="text-[10px] tracking-[0.18em] uppercase text-white/80 mt-1">Spa Merkezi</div>
+            <Link to="/" className="inline-flex items-center mb-5">
+              <img
+                src={IMAGES.logo}
+                alt="Laswegas Spa"
+                className="h-24 md:h-28 w-auto object-contain"
+              />
             </Link>
             <p className="text-sm leading-relaxed text-white/85 mb-5">
               Rahatlamanın ve yenilenmenin adresi — {SALON.city}

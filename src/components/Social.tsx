@@ -8,10 +8,6 @@ const FEED = [
   IMAGES.gallery3,
   IMAGES.gallery5,
   IMAGES.gallery6,
-  IMAGES.gallery7,
-  IMAGES.gallery8,
-  IMAGES.aboutInterior,
-  IMAGES.heroMassage,
 ];
 
 export default function Social() {

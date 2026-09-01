@@ -31,45 +31,47 @@ export const SOCIAL = {
 export const whatsappLink = (message: string) =>
   `https://wa.me/${SALON.whatsapp}?text=${encodeURIComponent(message)}`;
 
+const photo = (file: string) => `/images/${file}.jpg`;
+
+export const SALON_PHOTOS = [
+  photo('IMG_1637'),
+  photo('IMG_1644'),
+  photo('IMG_1654'),
+  photo('IMG_1655'),
+  photo('IMG_1656'),
+] as const;
+
 export const IMAGES = {
-  heroMassage: 'https://images.pexels.com/photos/6629612/pexels-photo-6629612.jpeg?auto=compress&cs=tinysrgb&w=1920',
-  aboutInterior: 'https://images.pexels.com/photos/6899544/pexels-photo-6899544.jpeg?auto=compress&cs=tinysrgb&w=1280',
-  gallery1: 'https://images.pexels.com/photos/35884499/pexels-photo-35884499.jpeg?auto=compress&cs=tinysrgb&w=1280',
-  gallery2: 'https://images.pexels.com/photos/6186740/pexels-photo-6186740.jpeg?auto=compress&cs=tinysrgb&w=1280',
-  gallery3: 'https://images.pexels.com/photos/6560252/pexels-photo-6560252.jpeg?auto=compress&cs=tinysrgb&w=1280',
-  gallery5: 'https://images.pexels.com/photos/6187657/pexels-photo-6187657.jpeg?auto=compress&cs=tinysrgb&w=1280',
-  gallery6: 'https://images.pexels.com/photos/6187648/pexels-photo-6187648.jpeg?auto=compress&cs=tinysrgb&w=1280',
-  gallery7: 'https://images.pexels.com/photos/6188113/pexels-photo-6188113.jpeg?auto=compress&cs=tinysrgb&w=1280',
-  gallery8: 'https://images.pexels.com/photos/9146381/pexels-photo-9146381.jpeg?auto=compress&cs=tinysrgb&w=1280',
-  therapist1: 'https://images.pexels.com/photos/3865545/pexels-photo-3865545.jpeg?auto=compress&cs=tinysrgb&w=900',
-  therapist2: 'https://images.pexels.com/photos/6628599/pexels-photo-6628599.jpeg?auto=compress&cs=tinysrgb&w=900',
-  therapist3: 'https://images.pexels.com/photos/9335959/pexels-photo-9335959.jpeg?auto=compress&cs=tinysrgb&w=900',
-  therapist4: 'https://images.pexels.com/photos/4599371/pexels-photo-4599371.jpeg?auto=compress&cs=tinysrgb&w=900',
+  logo: '/images/logo.png',
+  heroMassage: SALON_PHOTOS[0],
+  aboutInterior: SALON_PHOTOS[3],
+  gallery1: SALON_PHOTOS[0],
+  gallery2: SALON_PHOTOS[1],
+  gallery3: SALON_PHOTOS[2],
+  gallery5: SALON_PHOTOS[3],
+  gallery6: SALON_PHOTOS[4],
+  gallery7: SALON_PHOTOS[0],
+  gallery8: SALON_PHOTOS[2],
 };
 
 export const CAROUSEL = [
   {
-    src: 'https://images.pexels.com/photos/6629612/pexels-photo-6629612.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    src: SALON_PHOTOS[0],
     title: 'Laswegas Spa Merkezi',
     text: 'Kocasınan’da sakin bir mola',
   },
   {
-    src: 'https://images.pexels.com/photos/6187652/pexels-photo-6187652.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    src: SALON_PHOTOS[1],
     title: 'Sıcak yağ ritüelleri',
     text: 'Sultan ve Bali masajlarıyla derin rahatlama',
   },
   {
-    src: 'https://images.pexels.com/photos/6899544/pexels-photo-6899544.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    src: SALON_PHOTOS[2],
     title: 'Temiz, huzurlu odalar',
     text: 'Mahremiyet ve hijyen önceliğimiz',
   },
   {
-    src: 'https://images.pexels.com/photos/6187657/pexels-photo-6187657.jpeg?auto=compress&cs=tinysrgb&w=1920',
-    title: 'Sıcak taş terapisi',
-    text: 'Soğukta sertleşen kaslar için',
-  },
-  {
-    src: 'https://images.pexels.com/photos/6188113/pexels-photo-6188113.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    src: SALON_PHOTOS[4],
     title: 'Kişiye özel seans',
     text: 'Klasik, medikal, mix ve aroma terapi',
   },
@@ -112,7 +114,7 @@ export const SERVICES: Service[] = [
     duration: '60 dk',
     intensity: 'Hafif — orta',
     oil: 'Nötr bitkisel yağ veya hafif aromatik yağ',
-    image: 'https://images.pexels.com/photos/38407816/pexels-photo-38407816.jpeg?auto=compress&cs=tinysrgb&w=1280',
+    image: '/images/masaj-klasik.jpg',
     benefits: [
       'Boyun ve omuz gerginliğini azaltır',
       'Kan dolaşımını hızlandırır',
@@ -176,7 +178,7 @@ export const SERVICES: Service[] = [
     duration: '75 dk',
     intensity: 'Hafif — yoğun (kişiye özel karma)',
     oil: 'Nötr veya aromatik yağ (tercihe göre)',
-    image: 'https://images.pexels.com/photos/34821383/pexels-photo-34821383.jpeg?auto=compress&cs=tinysrgb&w=1280',
+    image: '/images/masaj-mix.jpg',
     benefits: [
       'Birden fazla ihtiyaca tek seansta çözüm',
       'Bölgeye göre değişen baskı deneyimi',
@@ -241,7 +243,7 @@ export const SERVICES: Service[] = [
     duration: '50 dk',
     intensity: 'Çok hafif',
     oil: 'Hafif nötr yağ',
-    image: 'https://images.pexels.com/photos/6560252/pexels-photo-6560252.jpeg?auto=compress&cs=tinysrgb&w=1280',
+    image: '/images/masaj-soft.jpg',
     benefits: [
       'Sinir sistemini sakinleştirir',
       'Aşırı hassas bölgeler için uygundur',
@@ -306,7 +308,7 @@ export const SERVICES: Service[] = [
     duration: '75 dk',
     intensity: 'Orta — yüksek',
     oil: 'Az yağ / lokal çalışma',
-    image: 'https://images.pexels.com/photos/20860601/pexels-photo-20860601.jpeg?auto=compress&cs=tinysrgb&w=1280',
+    image: '/images/masaj-medikal.jpg',
     benefits: [
       'Kronik kas ağrısını hedefler',
       'Tetik noktalarını çözer',
@@ -371,7 +373,7 @@ export const SERVICES: Service[] = [
     duration: '60 dk',
     intensity: 'Hafif',
     oil: 'Uçucu yağ + taşıyıcı yağ karışımı',
-    image: 'https://images.pexels.com/photos/6629612/pexels-photo-6629612.jpeg?auto=compress&cs=tinysrgb&w=1280',
+    image: '/images/masaj-aroma.jpg',
     benefits: [
       'Stresi yumuşatır',
       'Nefes ve zihin sakinliği verir',
@@ -435,7 +437,7 @@ export const SERVICES: Service[] = [
     duration: '90 dk',
     intensity: 'Hafif — orta',
     oil: 'Sıcak özel yağ karışımı',
-    image: 'https://images.pexels.com/photos/6187652/pexels-photo-6187652.jpeg?auto=compress&cs=tinysrgb&w=1280',
+    image: '/images/masaj-sultan.jpg',
     benefits: [
       'Derin kas gevşemesi',
       'Sıcak yağla dolaşım artışı',
@@ -500,7 +502,7 @@ export const SERVICES: Service[] = [
     duration: '75 dk',
     intensity: 'Orta',
     oil: 'Aromatik yağ + sıcak taş',
-    image: 'https://images.pexels.com/photos/5378218/pexels-photo-5378218.jpeg?auto=compress&cs=tinysrgb&w=1280',
+    image: '/images/masaj-bali.jpg',
     benefits: [
       'Sıcak taşla derin ısı',
       'Kan dolaşımını canlandırır',
@@ -553,42 +555,3 @@ export const SERVICES: Service[] = [
 ];
 
 export const getServiceById = (id: string) => SERVICES.find((s) => s.id === id);
-
-export type Therapist = {
-  name: string;
-  title: string;
-  experience: string;
-  specialties: string[];
-  image: string;
-};
-
-export const THERAPISTS: Therapist[] = [
-  {
-    name: 'Merve Aktaş',
-    title: 'Baş Terapist & Spa Sorumlusu',
-    experience: '12 yıl deneyim',
-    specialties: ['Mix Masaj', 'Sultan Masajı', 'Bali Masajı'],
-    image: IMAGES.therapist1,
-  },
-  {
-    name: 'Burcu Yılmaz',
-    title: 'Sertifikalı Masaj Terapisti',
-    experience: '8 yıl deneyim',
-    specialties: ['Klasik Masaj', 'Aroma Terapi', 'Medikal Masaj'],
-    image: IMAGES.therapist2,
-  },
-  {
-    name: 'Zeynep Kara',
-    title: 'Aromaterapi Uzmanı',
-    experience: '6 yıl deneyim',
-    specialties: ['Aroma Terapi', 'Lenf Drenaj', 'Cilt Bakımı'],
-    image: IMAGES.therapist3,
-  },
-  {
-    name: 'Ayşe Demirci',
-    title: 'Medikal Masaj Uzmanı',
-    experience: '10 yıl deneyim',
-    specialties: ['Medikal Masaj', 'Derin Doku', 'Spor Masajı'],
-    image: IMAGES.therapist4,
-  },
-];

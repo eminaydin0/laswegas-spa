@@ -9,7 +9,7 @@ export default function Hero() {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((current) => (current + 1) % CAROUSEL.length);
-    }, 5000);
+    }, 7000);
     return () => clearInterval(timer);
   }, []);
 
@@ -17,16 +17,20 @@ export default function Hero() {
   const next = () => setIndex((current) => (current + 1) % CAROUSEL.length);
 
   return (
-    <section id="home" className="pt-[108px] md:pt-[116px]">
+    <section id="home" className="pt-[70px] md:pt-[76px]">
       <div className="relative w-full overflow-hidden min-h-[78vh] md:min-h-[88vh]">
         {CAROUSEL.map((item, i) => (
           <div
             key={item.src}
-            className={`absolute inset-0 transition-opacity duration-700 ease-out ${
+            className={`absolute inset-0 overflow-hidden transition-opacity duration-1000 ease-out ${
               i === index ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <img src={item.src} alt={item.title} className="w-full h-full object-cover" />
+            <img
+              src={item.src}
+              alt={item.title}
+              className={`w-full h-full object-cover ${i === index ? 'hero-kenburns' : ''}`}
+            />
           </div>
         ))}
 
