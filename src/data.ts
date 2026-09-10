@@ -10,7 +10,7 @@ export const SALON = {
   address: 'Ertuğrul Osman Gazi Mah. 4381. Sokak No:5/D 38110 Kocasınan/Kayseri',
   addressShort: '4381. Sokak No:5/D',
   district: 'Ertuğrul Osman Gazi Mahallesi (Erkilet)',
-  hours: 'Her gün 11:00 — 23:00',
+  hours: 'Her gün 12:00 — 00:00',
   city: 'Kayseri / Kocasınan',
   landmark: 'Erkilet, Kocasınan/Kayseri',
 };
