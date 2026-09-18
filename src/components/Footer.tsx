@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { MapPinned, Phone } from 'lucide-react';
-import { IMAGES, LOCATION, SALON, SOCIAL } from '@/data';
+import { IMAGES, LOCATION, SALON, SERVICES, SOCIAL } from '@/data';
 import { WhatsAppIcon, InstagramIcon, FacebookIcon } from '@/components/BrandIcons';
 
 export default function Footer() {
@@ -78,7 +78,7 @@ export default function Footer() {
             <Link to="/" className="inline-flex items-center mb-5">
               <img
                 src={IMAGES.logo}
-                alt="Laswegas Spa"
+                alt="Laswegas Spa Merkezi Kayseri Kocasınan logo"
                 className="h-24 md:h-28 w-auto object-contain"
               />
             </Link>
@@ -117,18 +117,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-xs tracking-[0.16em] uppercase text-white/70 mb-4">Menü</h4>
+            <h4 className="text-xs tracking-[0.16em] uppercase text-white/70 mb-4">Masajlar</h4>
             <ul className="space-y-2.5 text-sm text-white/90">
-              {[
-                ['/#about', 'Hakkımızda'],
-                ['/#services', 'Masajlar'],
-                ['/#gallery', 'Galeri'],
-                ['/#contact', 'İletişim'],
-              ].map(([href, label]) => (
-                <li key={href}>
-                  <a href={href} className="hover:text-white transition-colors">
-                    {label}
-                  </a>
+              {SERVICES.map((service) => (
+                <li key={service.id}>
+                  <Link to={`/hizmet/${service.id}`} className="hover:text-white transition-colors">
+                    {service.name}
+                  </Link>
                 </li>
               ))}
             </ul>

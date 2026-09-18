@@ -16,9 +16,40 @@ export const SALON = {
 };
 
 export const LOCATION = {
+  lat: 38.7942517,
+  lng: 35.4543727,
   mapEmbed: 'https://maps.google.com/maps?q=38.7942517,35.4543727&z=16&ie=UTF8&iwloc=&output=embed',
   mapLink: 'https://maps.app.goo.gl/pStDFTszjPyF4JnX6',
 };
+
+export const SITE_URL = 'https://laswegasspa.com.tr';
+
+export const FAQS = [
+  {
+    q: 'Kayseri Kocasınan’da masaj salonu var mı?',
+    a: 'Evet. Laswegas Spa Merkezi, Kocasınan / Erkilet’te (Ertuğrul Osman Gazi Mah. 4381. Sokak No:5/D) hizmet verir. Klasik, medikal, mix, soft, aroma terapi, Sultan ve Bali masajı sunuyoruz.',
+  },
+  {
+    q: 'Laswegas Spa çalışma saatleri nedir?',
+    a: 'Her gün 12:00 — 00:00 açığız. Randevu için WhatsApp veya telefon yeterlidir.',
+  },
+  {
+    q: 'Kayseri’de masaj randevusu nasıl alınır?',
+    a: 'WhatsApp’tan yazabilir veya 0501 361 03 29 numarayı arayabilirsiniz. Uygun saati birlikte netleştiriyoruz.',
+  },
+  {
+    q: 'Hangi masaj çeşitleri var?',
+    a: 'Klasik masaj, mix masaj, soft masaj, medikal masaj, aroma terapi masajı, Sultan masajı ve Bali masajı uygulanır. Seans süresi ve baskı kişiye göre ayarlanır.',
+  },
+  {
+    q: 'İlk kez masaja gelenler nelere dikkat etmeli?',
+    a: 'Rahat kıyafet yeterli. Seans başında şikâyetinizi ve baskı tercihinizi söylersiniz. Soft veya klasik masaj ilk deneyim için uygundur. Aç yara, ateş veya doktor kısıtı varsa seansı erteleyin.',
+  },
+  {
+    q: 'Laswegas Spa tam olarak nerede?',
+    a: 'Ertuğrul Osman Gazi Mahallesi, 4381. Sokak No:5/D, 38110 Kocasınan / Kayseri (Erkilet). Google Haritalar’dan “Laswegas Spa” yazarak ulaşabilirsiniz.',
+  },
+];
 
 export const SOCIAL = {
   instagram: 'https://www.instagram.com/laswegaspa',

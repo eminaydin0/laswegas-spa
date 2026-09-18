@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { SERVICES, SALON } from '@/data';
+import { SERVICES } from '@/data';
 import Reveal from '@/components/Reveal';
 
 export default function Services() {
@@ -8,9 +8,10 @@ export default function Services() {
       <div className="page-shell">
         <Reveal>
           <div className="section-head">
-            <h2 className="section-title mb-3">Hizmetlerimizi Keşfedin</h2>
+            <h2 className="section-title mb-3">Kayseri Masaj Çeşitleri</h2>
             <p className="section-lead">
-              {SALON.nameShort} Spa’da siz değerli misafirlerimize hizmet etmekten memnuniyet duyarız.
+              Kocasınan’daki spa salonumuzda klasik, medikal, mix, soft, aroma terapi, Sultan ve Bali
+              masajı sunuyoruz.
             </p>
             <div className="gold-rule mt-6" />
           </div>
@@ -26,8 +27,10 @@ export default function Services() {
                 <div className="relative aspect-[4/3] overflow-hidden shrink-0">
                   <img
                     src={service.image}
-                    alt={service.name}
+                    alt={`${service.name} Kayseri Kocasınan`}
                     className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-700"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-mist-950/75 via-mist-950/10 to-transparent" />
                   <div className="absolute bottom-0 inset-x-0 p-4 md:p-5">

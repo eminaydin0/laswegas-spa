@@ -80,7 +80,7 @@ export default function Navbar() {
           <Link to="/" className="flex items-center shrink-0 overflow-visible">
             <img
               src={IMAGES.logo}
-              alt="Laswegas Spa"
+              alt="Laswegas Spa Merkezi Kayseri logosu"
               className="h-[76px] md:h-[88px] w-auto object-contain drop-shadow-sm"
             />
           </Link>

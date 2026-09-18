@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { HeartHandshake, MessageCircle, ShieldCheck, Sparkles } from 'lucide-react';
 import { IMAGES, SALON, SOCIAL } from '@/data';
 import Reveal from '@/components/Reveal';
@@ -32,7 +33,7 @@ export default function About() {
         <Reveal>
           <div className="text-center max-w-2xl mx-auto mb-6 md:mb-8">
             <h2 className="section-title-dark mb-1.5 text-balance">
-              Masaj ve Spa Salonu
+              Kayseri Kocasınan Masaj ve Spa Salonu
             </h2>
             <p className="text-mist-600 text-sm md:text-base mb-0.5">{SALON.subtitle}</p>
             <p className="font-display text-lg md:text-xl text-soft-500">{SALON.name}</p>
@@ -45,7 +46,7 @@ export default function About() {
             <div className="media-frame aspect-square">
               <img
                 src={IMAGES.aboutInterior}
-                alt="Laswegas Spa Merkezi iç mekan"
+                alt="Laswegas Spa Merkezi Kayseri Kocasınan iç mekan"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -55,12 +56,18 @@ export default function About() {
             <div className="flex flex-col justify-center">
               <div className="space-y-4 text-mist-600 leading-relaxed text-[15px] md:text-base">
                 <p>
-                  Laswegas, bedenin yavaşladığı ve zihnin sessizleştiği bir mola için var. Kapıdan
-                  girdiğiniz andan itibaren loş ışık, sakin müzik ve özel odalarla günün temposunu
-                  geride bırakmanızı istiyoruz.
+                  Laswegas Spa Merkezi, Kayseri Kocasınan / Erkilet’te bedenin yavaşladığı ve zihnin
+                  sessizleştiği bir mola için var. Kapıdan girdiğiniz andan itibaren loş ışık, sakin
+                  müzik ve özel odalarla günün temposunu geride bırakmanızı istiyoruz.
                 </p>
                 <p>
-                  Klasik, medikal, mix, soft, aroma terapi, Sultan ve Bali masajlarını kişiye özel
+                  <Link to="/hizmet/klasik-masaj" className="text-soft-600 hover:text-soft-500 font-medium">Klasik</Link>,{' '}
+                  <Link to="/hizmet/medikal-masaj" className="text-soft-600 hover:text-soft-500 font-medium">medikal</Link>,{' '}
+                  <Link to="/hizmet/mix-masaj" className="text-soft-600 hover:text-soft-500 font-medium">mix</Link>,{' '}
+                  <Link to="/hizmet/soft-masaj" className="text-soft-600 hover:text-soft-500 font-medium">soft</Link>,{' '}
+                  <Link to="/hizmet/aroma-terapi-masaji" className="text-soft-600 hover:text-soft-500 font-medium">aroma terapi</Link>,{' '}
+                  <Link to="/hizmet/sultan-masaji" className="text-soft-600 hover:text-soft-500 font-medium">Sultan</Link> ve{' '}
+                  <Link to="/hizmet/bali-masaji" className="text-soft-600 hover:text-soft-500 font-medium">Bali</Link> masajlarını kişiye özel
                   planlıyoruz. Hijyen ve mahremiyet bizim için standart; her seans sizin ritminize
                   göre şekillenir.
                 </p>

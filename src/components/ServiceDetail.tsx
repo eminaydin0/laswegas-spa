@@ -1,42 +1,58 @@
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import { Link, useParams, Navigate } from 'react-router-dom';
-import { ArrowLeft, Clock3, Droplets, Gauge } from 'lucide-react';
+import { Clock3, Droplets, Gauge } from 'lucide-react';
 import { getServiceById, SERVICES, SOCIAL, whatsappLink } from '@/data';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Seo from '@/components/Seo';
+import { getServiceSeo, serviceFaqs } from '@/seo';
 import { WhatsAppIcon, InstagramIcon } from '@/components/BrandIcons';
 
 export default function ServiceDetail() {
   const { id } = useParams();
   const service = id ? getServiceById(id) : undefined;
+  const seo = useMemo(() => (service ? getServiceSeo(service) : null), [service]);
+  const others = SERVICES.filter((s) => s.id !== service?.id).slice(0, 3);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id]);
 
-  if (!service) return <Navigate to="/" replace />;
-
-  const others = SERVICES.filter((s) => s.id !== service.id).slice(0, 3);
+  if (!service || !seo) return <Navigate to="/" replace />;
 
   return (
     <div className="min-h-screen bg-[#fafafa]">
+      <Seo page={seo} />
       <Navbar />
 
       <main className="pt-[70px] md:pt-[76px]">
         <div className="w-full">
           <div className="relative h-[48vh] min-h-[320px] overflow-hidden">
-            <img src={service.image} alt={service.name} className="w-full h-full object-cover" />
+            <img src={service.image} alt={`${service.name} Kayseri Laswegas Spa`} className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-mist-950/60 via-mist-950/15 to-transparent" />
             <div className="absolute bottom-0 inset-x-0 pb-8 md:pb-10">
               <div className="page-shell">
-              <Link
-                to="/#services"
-                className="inline-flex items-center gap-2 text-sm text-white/85 hover:text-white mb-4"
-              >
-                <ArrowLeft className="w-4 h-4" /> Tüm masajlar
-              </Link>
+              <nav aria-label="Sayfa yolu" className="text-sm text-white/80 mb-4">
+                <ol className="flex flex-wrap items-center gap-2">
+                  <li>
+                    <Link to="/" className="hover:text-white">
+                      Anasayfa
+                    </Link>
+                  </li>
+                  <li aria-hidden="true">/</li>
+                  <li>
+                    <Link to="/#services" className="hover:text-white">
+                      Masajlar
+                    </Link>
+                  </li>
+                  <li aria-hidden="true">/</li>
+                  <li className="text-white">{service.name}</li>
+                </ol>
+              </nav>
               <p className="text-[11px] tracking-[0.22em] uppercase text-soft-200 mb-2">{service.nameEn}</p>
-              <h1 className="font-display text-4xl md:text-5xl text-white">{service.name}</h1>
+              <h1 className="font-display text-4xl md:text-5xl text-white">
+                {service.name} — Kayseri Kocasınan
+              </h1>
               </div>
             </div>
           </div>
@@ -180,6 +196,18 @@ export default function ServiceDetail() {
             </div>
 
             <div className="mt-16 pt-10 border-t border-mist-200/80">
+              <h2 className="font-display text-2xl text-mist-900 mb-6">Sık sorulanlar</h2>
+              <div className="space-y-3">
+                {serviceFaqs(service).map((item) => (
+                  <details key={item.q} className="card p-5">
+                    <summary className="font-display text-lg text-mist-900 cursor-pointer">{item.q}</summary>
+                    <p className="text-mist-600 text-sm leading-relaxed mt-3">{item.a}</p>
+                  </details>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-16 pt-10 border-t border-mist-200/80">
               <h2 className="font-display text-2xl text-mist-900 mb-6">Diğer masajlar</h2>
               <div className="grid sm:grid-cols-3 gap-5">
                 {others.map((s) => (
@@ -187,7 +215,9 @@ export default function ServiceDetail() {
                     <div className="aspect-[4/3] overflow-hidden">
                       <img
                         src={s.image}
-                        alt={s.name}
+                        loading="lazy"
+                        decoding="async"
+                        alt={`${s.name} Kayseri`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>

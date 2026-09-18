@@ -28,7 +28,12 @@ export default function Hero() {
           >
             <img
               src={item.src}
-              alt={item.title}
+              alt={`${item.title} — Laswegas Spa Kayseri Kocasınan`}
+              width={1600}
+              height={900}
+              fetchPriority={i === 0 ? 'high' : 'low'}
+              loading={i === 0 ? 'eager' : 'lazy'}
+              decoding={i === 0 ? 'sync' : 'async'}
               className={`w-full h-full object-cover ${i === index ? 'hero-kenburns' : ''}`}
             />
           </div>
@@ -42,9 +47,10 @@ export default function Hero() {
               {SALON.subtitle}
             </p>
             <h1 className="font-display text-4xl md:text-6xl lg:text-[4.25rem] text-white leading-[1.08] drop-shadow-sm text-balance">
-              {slide.title}
+              Kayseri Kocasınan Masaj ve Spa Merkezi
             </h1>
-            <p className="mt-5 text-white/90 text-base md:text-lg max-w-lg mx-auto">{slide.text}</p>
+            <p className="mt-4 font-display text-xl md:text-2xl text-soft-200">{slide.title}</p>
+            <p className="mt-3 text-white/90 text-base md:text-lg max-w-lg mx-auto">{slide.text}</p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <a href={SOCIAL.whatsapp()} target="_blank" rel="noreferrer" className="btn-primary text-base px-8 py-4">
                 Tıkla Randevu Al
