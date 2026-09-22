@@ -4,4 +4,4 @@ Allow: /
 User-agent: Googlebot
 Allow: /
 
-Sitemap: https://laswegasspa.com.tr/sitemap.xml
+Sitemap: https://www.laswegasspa.com.tr/sitemap.xml

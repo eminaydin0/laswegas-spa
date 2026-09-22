@@ -28,7 +28,7 @@ export function seoBuildPlugin(): Plugin {
       fs.writeFileSync(path.join(dist, 'sitemap.xml'), sitemapXml(lastmod));
       fs.writeFileSync(
         path.join(dist, 'robots.txt'),
-        `User-agent: *\nAllow: /\n\nSitemap: https://laswegasspa.com.tr/sitemap.xml\n`,
+        `User-agent: *\nAllow: /\n\nSitemap: https://www.laswegasspa.com.tr/sitemap.xml\n`,
       );
     },
   };

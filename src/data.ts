@@ -22,7 +22,7 @@ export const LOCATION = {
   mapLink: 'https://maps.app.goo.gl/pStDFTszjPyF4JnX6',
 };
 
-export const SITE_URL = 'https://laswegasspa.com.tr';
+export const SITE_URL = 'https://www.laswegasspa.com.tr';
 
 export const FAQS = [
   {
